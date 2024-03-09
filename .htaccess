@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteRule ^download$ download.php
+RewriteRule ^download-tiktok-mp3$ index.php?menu=download-tiktok-mp3
+RewriteRule ^download-tiktok-slideshow$ index.php?menu=download-tiktok-slideshow
+RewriteRule ^download-tiktok-story$ index.php?menu=download-tiktok-story
