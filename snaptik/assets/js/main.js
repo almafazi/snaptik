@@ -223,7 +223,7 @@ function showBtnClear() {
 if (!navigator.clipboard?.readText) {
     document.querySelector('.paste').style.display = 'none';
 }
-btnPaste.addEventListener("click", function() {
+btnPaste?.addEventListener("click", function() {
     if (btnPaste.classList.contains("active")) {
         inputUrl.value = "";
         if (navigator.clipboard) {
@@ -244,9 +244,11 @@ btnPaste.addEventListener("click", function() {
     }
 });
 if (navigator.clipboard) {
-    btnPaste.style.display = "flex";
+    if(btnPaste) {
+        btnPaste.style.display = "flex";
+    }
 }
-inputUrl.addEventListener("keyup", function(e) {
+inputUrl?.addEventListener("keyup", function(e) {
     if (inputUrl.value.length > 0) {
         showBtnClear();
     }
@@ -324,7 +326,7 @@ var handleShareFile = async (blob, fileName, title, text) => {
 if (webShareSupported) {
     download.classList.add('can-share');
 }
-download.addEventListener('click', async (e) => {
+download?.addEventListener('click', async (e) => {
     var fileShareNode = e.target.closest('.btn-share');
     if (fileShareNode) {
         fileShareNode.innerText = "please wait";
