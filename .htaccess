@@ -8,3 +8,5 @@ RewriteRule ^privacy-policy$ ^page/privacy-policy.php?menu=download-tiktok-story
 RewriteRule ^tos$ ^page/tos.php
 RewriteRule ^contact$ ^page/contact.php
 RewriteRule ^about-us$ ^page/about-us.php
+RewriteRule ^en/$ ^multilanguage/en/index.php
+RewriteRule ^ID/$ ^multilanguage/ID/index.php

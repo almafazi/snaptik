@@ -116,7 +116,6 @@ function asset($url) {
 </nav>
 </header>
 
-
 <main id="main" class="my-5">
     <section class="section tos">
     <div class="container">
