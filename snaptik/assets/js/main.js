@@ -57,7 +57,7 @@ if (form) {
             "dubLang": false,
             "tiktok": true,
             "menu": document.getElementById("menu").value ? document.getElementById("menu").value : null,
-            "download_url": "http://snaptik.vip/tiktok/download"
+            "download_url": "https://snaptik.vip/tiktok/download"
          });
         progress.classList.add('active');
         runProgress();
