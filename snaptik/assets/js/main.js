@@ -57,13 +57,13 @@ if (form) {
             "dubLang": false,
             "tiktok": true,
             "menu": document.getElementById("menu").value ? document.getElementById("menu").value : null,
-            "download_url": "http://localhost:3000/download"
+            "download_url": "http://snaptik.vip/tiktok/download"
          });
         progress.classList.add('active');
         runProgress();
         
         var oReq = new XMLHttpRequest();
-        oReq.open("POST", "https://cdn.snaptik.vip/cdn-tiktok/api/json", true);
+        oReq.open("POST", "https://cdn.snaptik.vip/dl/tiktok", true);
         oReq.setRequestHeader("Content-Type", "application/json");
         oReq.setRequestHeader("Accept", "application/json");
         oReq.onload = function(oEvent) {
