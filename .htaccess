@@ -1,12 +1,11 @@
 RewriteEngine on
 RewriteRule ^download$ download.php
-RewriteRule ^en$ en.php
 RewriteRule ^download-tiktok-mp3$ index.php?menu=download-tiktok-mp3
 RewriteRule ^download-tiktok-slideshow$ index.php?menu=download-tiktok-slideshow
 RewriteRule ^download-tiktok-story$ index.php?menu=download-tiktok-story
-RewriteRule ^privacy-policy$ ^page/privacy-policy.php?menu=download-tiktok-story
-RewriteRule ^tos$ ^page/tos.php
-RewriteRule ^contact$ ^page/contact.php
-RewriteRule ^about-us$ ^page/about-us.php
-RewriteRule ^en/$ ^multilanguage/en/index.php
-RewriteRule ^ID/$ ^multilanguage/ID/index.php
+RewriteRule ^privacy-policy$ page/privacy-policy.php
+RewriteRule ^tos$ page/tos.php
+RewriteRule ^contact$ page/contact.php
+RewriteRule ^about-us$ page/about-us.php
+RewriteRule ^en/(.*)$ multilanguage/en/index.php?lang=us
+RewriteRule ^id/(.*)$ multilanguage/id/index.php?lang=id

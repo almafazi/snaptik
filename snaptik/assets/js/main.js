@@ -57,7 +57,8 @@ if (form) {
             "dubLang": false,
             "tiktok": true,
             "menu": document.getElementById("menu").value ? document.getElementById("menu").value : null,
-            "download_url": "https://snaptik.vip/tiktok/download"
+            "download_url": url + "download",
+            "website_url": url
          });
         progress.classList.add('active');
         runProgress();
@@ -294,7 +295,7 @@ shareButton.addEventListener('click', event => {
     if (navigator.share) {
         navigator.share({
             title: 'Share SnapTik',
-            url: url + '/' + lang.currentLang + '/'
+            url: url + lang.currentLang + '/'
         }).then(() => {}).catch(console.error);
     } else {}
 });
