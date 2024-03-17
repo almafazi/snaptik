@@ -113,24 +113,23 @@ function mp3check(id, server){
 }
 function checkCluster(id){
 	$.ajax({
-		type: 'GET',
-		url: 'https://node1.canehill.info/check-cluster/check?fileId=<?php echo ($_GET['id']); ?>',
-		success: function(data, textStatus, request){	
-			console.log(data);
+		type: 'POST',
+		data: JSON.stringify({youtubeUrl: "https://www.youtube.com/watch?v=<?php echo ($_GET['id']); ?>"}),
+		accept: 'application/json',
+		contentType: 'application/json',
+		url: 'https://node1.canehill.info/cdn-lb/convert',
+		success: function(data, textStatus, jqXHR) {
+        	var serverUrl = jqXHR.getResponseHeader('X-Server-URL');
 			if(data.exists) {
 				$("#downloadButton").removeClass("dmtrigger");
-				if(data.mp3Path) {
+				if(data.mp3path) {
 					if(typeof turnstile !== "undefined"){
 						turnstile.remove(window.turnstileWID);
 					}
 					$('#dt').text('Success');
 
-					myserver = data.server.replace("http://", "https://");
+					var dlink = serverUrl+'/'+'get-file?dlink='+data.mp3path;
 
-					var dlink = myserver+'/api-dl/'+'get-file?dlink='+data.mp3Path;
-
-					console.log(dlink);
-						
 					$("body").append('<iframe src="' + dlink + '" style="display: none;" ></iframe>');
 					setTimeout(function(){
 						$("#downloadButton").addClass("dmtrigger");
@@ -139,9 +138,7 @@ function checkCluster(id){
 					}, 2500);		
 				}
 			} else {
-				myserver = data.server.replace("http://", "https://");
-
-				mp3Conversion(id, myserver);
+				mp3Conversion(id, serverUrl);
 			}
 		},
 		error : function(xhr, status, ex) {
