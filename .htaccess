@@ -9,3 +9,17 @@ RewriteRule ^contact$ page/contact.php
 RewriteRule ^about-us$ page/about-us.php
 RewriteRule ^en/(.*)$ multilanguage/en/index.php?lang=us
 RewriteRule ^id/(.*)$ multilanguage/id/index.php?lang=id
+RewriteRule ^vn/(.*)$ multilanguage/vn/index.php?lang=vn
+RewriteRule ^ms/(.*)$ multilanguage/ms/index.php?lang=ms
+RewriteRule ^tr/(.*)$ multilanguage/tr/index.php?lang=tr
+RewriteRule ^jv/(.*)$ multilanguage/jv/index.php?lang=jv
+RewriteRule ^es/(.*)$ multilanguage/es/index.php?lang=es
+RewriteRule ^fr/(.*)$ multilanguage/fr/index.php?lang=fr
+RewriteRule ^de/(.*)$ multilanguage/de/index.php?lang=de
+RewriteRule ^it/(.*)$ multilanguage/it/index.php?lang=it
+RewriteRule ^pt/(.*)$ multilanguage/pt/index.php?lang=pt
+RewriteRule ^th/(.*)$ multilanguage/th/index.php?lang=th
+RewriteRule ^ar/(.*)$ multilanguage/ar/index.php?lang=ar
+RewriteRule ^ko/(.*)$ multilanguage/ko/index.php?lang=ko
+RewriteRule ^ja/(.*)$ multilanguage/ja/index.php?lang=ja
+RewriteRule ^in/(.*)$ multilanguage/in/index.php?lang=in
